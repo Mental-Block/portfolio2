@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Aaron's Portfolio</title>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <header>
+        <nav class="nav" aria-label="main menu">
+          <a class="nav-logo" alt="logo" href="#home"></a>
+
+          <span id="nav-label" hidden>Navigation</span>
+          <button
+            id="burger"
+            class="nav-burger"
+            aria-expanded="false"
+            aria-labelledby="nav-label"
+          >
+            <div aria-hidden="true" class="nav-burger-line"></div>
+            <div aria-hidden="true" class="nav-burger-line"></div>
+            <div aria-hidden="true" class="nav-burger-line"></div>
+          </button>
+
+          <ul
+            class="nav-link-wrapper hidden"
+            role="dialog"
+            aria-labelledby="nav-label"
+            id="menu"
+          >
+            <li class="nav-item">
+              <a class="nav-link nav-link-active" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#tech">Tech</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#resume">Resume</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <div id="home"></div>
+        <div data-scroll-fix>
+          <section class="landing-container">
+            <div data-home-animation></div>
+            <div class="flex-center-center-column">
+              <h1 class="landing-text">
+                Hi, I'm Aaron. Full stack developer :)
+              </h1>
+              <div class="primary-btn-gradient">
+                <a class="landing-btn" href="#projects">See My Work</a>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="scroll-fix-id" id="about"></div>
+        <div data-scroll-fix style="margin-top: 2px">
+          <section class="about-container">
+            <div class="glowing-column-left">
+              <!--  hides the arrow transition on start -->
+              <div class="glowing-column-top-fix"></div>
+
+              <!-- hides row box shadow that overlaps with row -->
+              <div class="glowing-column-top-shadow-fix"></div>
+
+              <!-- hides column box shadow that overlaps with row-->
+              <div class="glowing-column-bottom-shadow-fix"></div>
+
+              <!-- hide arrow on transition end -->
+              <div class="glowing-column-bottom-fix"></div>
+
+              <span data-glowing-column-arrow></span>
+            </div>
+
+            <div class="glowing-row">
+              <!-- hides the arrow transition on finished -->
+              <div class="glowing-row-left-fix"></div>
+
+              <span data-glowing-row-arrow-left></span>
+            </div>
+
+            <div class="flex-center-center-column">
+              <h1 class="h1" tabindex="0" data-arrow>About Me</h1>
+            </div>
+
+            <div class="flex-center-center-column">
+              <div class="card-gradient">
+                <div class="card">
+                  <h2 class="h2" tabindex="0">TDLR (Short Version)</h2>
+                  <p class="text" tabindex="0">
+                    I'm a Full Stack developer based in Ottawa with over five
+                    years of programming experience, including two years in a
+                    professional setting. I bring stakeholders' visions to life
+                    while following SOLID engineering principles and design
+                    patterns, ensuring that the code I write is maintainable for
+                    future developers. I work for a leading Canadian company at
+                    their manufacturing facility. I maintain, devlope internal
+                    tooling and equipment within manufacturing plant. In my free
+                    time, I am exploring embedded systems and advancing my
+                    learning in DBMS.
+                  </p>
+                </div>
+              </div>
+
+              <div class="card-gradient">
+                <div class="card">
+                  <h2 class="h2" tabindex="0">
+                    My Journey So Far (Long Version)
+                  </h2>
+
+                  <p class="text" tabindex="0">
+                    I was first introduced to programming as a junior in high
+                    school after being recommend it by my physics teacher after
+                    doing well in
+                    <a href="/images/award.jpeg" target="_blank" class="link">
+                      Intro To Computers
+                    </a>
+                    which focused more on the hardware aspect of electronics. We
+                    started with the fundamental concepts of programming in
+                    BASIC using a web based enviroment called
+                    <a
+                      class="link"
+                      href="https://www.quitebasic.com"
+                      target="_blank"
+                      rel="noreferrer"
+                      >Quite Basic</a
+                    >. Where I wrote my first code and created my first simple
+                    game. It was a 2d pixel game much like the space invaiders.
+                    I enjoyed the process of figuring out why something didn't
+                    work and how to make it work. Half way through the semester
+                    I had a working and refactored copy completing the material
+                    for that course. Since I finished way earlier than what was
+                    anticipated. I ended up becoming a second resource for other
+                    students who needed help walking them through their logic.
+                    At the end of the year I won the
+                    <a href="/images/award2.jpeg" target="_blank" class="link"
+                      >Computer Science Award</a
+                    >.
+                  </p>
+
+                  <p class="text" tabindex="0">
+                    The next year I took Advanced Computer Science as a senior.
+                    This was much more heavily focused on data structures and
+                    algorithms than the first year of understanding the
+                    fundamentals. About 40% of the class dropped out. We started
+                    with stacks, queues and arrays. Then simple sorting
+                    algorithms like bubble and insertion sort. Moving on to
+                    binary search and ending with more advanced array and sub
+                    array techniques like sliding window. Winning again, the
+                    <a href="/images/award3.jpeg" target="_blank" class="link">
+                      Computer Science Award</a
+                    >. Graduating that year.
+                  </p>
+
+                  <p class="text" tabindex="0">
+                    I took a year off from school, learning web development on
+                    the side when the covid-19 pandemic hit. At that time I was
+                    fortunate enough to have work being a construction labour
+                    moving concrete blocks and stone. After a couple summers I
+                    became tired of working in the cold and applied for a
+                    factory position. I was hired during this time, I became
+                    frustrated with inefficient internal processes and thought I
+                    could build a better system. So, after work I go home
+                    straight to the computer. The project is
+                    <a
+                      href="https://github.com/Mental-Block/smt-calc"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="link"
+                      >SMT CALC</a
+                    >
+                    if your intrested and can get it running. The code is
+                    garbage. I've come a long way since then. Fortunately, it
+                    did solve a business case and the director of manufacturing
+                    eng. and operational technology manager were willing to
+                    invest in me.
+                  </p>
+
+                  <p class="text" tabindex="0">
+                    At that role and I maintained and developed internal
+                    software within manufacturing plant. In my free time, I am
+                    exploring embedded systems and advancing my learning in
+                    DBMS.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="glowing-row-bottom">
+              <div class="glowing-row-left-fix"></div>
+
+              <span data-glowing-row-arrow-right></span>
+            </div>
+          </section>
+        </div>
+
+        <div class="scroll-fix-id" id="projects"></div>
+        <div data-scroll-fix style="margin-top: 2px">
+          <section class="projects-container">
+            <div class="flex-center-center-row">
+              <h1 class="h1">Projects</h1>
+            </div>
+
+            <div class="projects-card-layout">
+              <div class="card-gradient">
+                <div class="card">
+                  <div class="card-title-container">
+                    <h2 class="card-title">MFG</h2>
+                  </div>
+
+                  <div class="card-content">
+                    <ul class="tag-container">
+                      <h3 class="tag-title">Technologies</h3>
+                      <li class="tag-gradient">
+                        <span class="tag">TypeScript</span>
+                      </li>
+                      <li class="tag-gradient">
+                        <span class="tag">HTML</span>
+                      </li>
+                      <li class="tag-gradient">
+                        <span class="tag">CSS</span>
+                      </li>
+                      <li class="tag-gradient">
+                        <span class="tag">React</span>
+                      </li>
+                      <li class="tag-gradient">
+                        <span class="tag">Go</span>
+                      </li>
+                      <li class="tag-gradient">
+                        <span class="tag">Docker</span>
+                      </li>
+                      <li class="tag-gradient">
+                        <span class="tag">Postgres</span>
+                      </li>
+                      <li class="tag-gradient">
+                        <span class="tag">Ant Design</span>
+                      </li>
+                      <li class="tag-gradient">
+                        <span class="tag">Web Pack</span>
+                      </li>
+                    </ul>
+
+                    <div>
+                      <img />
+                    </div>
+                  </div>
+
+                  <div class="card-footer">
+                    <div class="primary-btn-gradient">
+                      <button class="primary-btn">Find Out More</button>
+                    </div>
+                    <div class="primary-btn-gradient">
+                      <button class="primary-btn">Source Code</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-gradient">
+                <div class="card">
+                  <div class="card-title-container">
+                    <h2 class="card-title">8 Bit Computer</h2>
+                  </div>
+
+                  <div class="card-container">
+                    <ul class="tag-container">
+                      <h3 class="tag-title text">Technologies</h3>
+                      <li class="tag-gradient">
+                        <span class="tag">Logic Gates</span>
+                      </li>
+                      <li class="tag-gradient">
+                        <span class="tag">Binary</span>
+                      </li>
+                      <li class="tag-gradient">
+                        <span class="tag">Assembly</span>
+                      </li>
+                      <li class="tag-gradient">
+                        <span class="tag">BASIC</span>
+                      </li>
+                    </ul>
+
+                    <div>
+                      <img />
+                    </div>
+                  </div>
+
+                  <div class="card-footer">
+                    <div class="primary-btn-gradient">
+                      <button class="primary-btn">Find Out More</button>
+                    </div>
+                    <div class="primary-btn-gradient">
+                      <button class="primary-btn">Source Code</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-gradient">
+                <div class="card">
+                  <div class="card-title-container">
+                    <h2 class="card-title">Tetris</h2>
+                  </div>
+
+                  <div class="card-container">
+                    <ul class="tag-container">
+                      <h3 class="tag-title text">Technologies</h3>
+                      <li class="tag-gradient">
+                        <span class="tag">HTML</span>
+                      </li>
+                      <li class="tag-gradient">
+                        <span class="tag">CSS</span>
+                      </li>
+                      <li class="tag-gradient">
+                        <span class="tag">JavaScript</span>
+                      </li>
+                    </ul>
+
+                    <div>
+                      <img />
+                    </div>
+                  </div>
+
+                  <div class="card-footer">
+                    <div class="primary-btn-gradient">
+                      <button class="primary-btn">Find Out More</button>
+                    </div>
+                    <div class="primary-btn-gradient">
+                      <button class="primary-btn">Source Code</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="scroll-fix-id" id="tech"></div>
+        <div data-scroll-fix>
+          <section class="skills-container">
+            <div class="glowing-column-left">
+              <!--  hides the arrow transition on start -->
+              <div class="glowing-column-top-fix"></div>
+
+              <!-- hides row box shadow that overlaps with row -->
+              <div class="glowing-column-top-shadow-fix"></div>
+
+              <!-- hides column box shadow that overlaps with row-->
+              <div class="glowing-column-bottom-shadow-fix"></div>
+
+              <!-- hide arrow on transition end -->
+              <div class="glowing-column-bottom-fix"></div>
+
+              <span data-glowing-column-arrow></span>
+            </div>
+
+            <div class="glowing-row">
+              <!-- hides the arrow transition on finished -->
+              <div class="glowing-row-left-fix"></div>
+
+              <span data-glowing-row-arrow-left></span>
+            </div>
+
+            <div class="flex-center-center-row">
+              <h1 class="h1" data-arrow>Frequently Used Tech</h1>
+            </div>
+
+            <div class="card-gradient">
+              <div class="card">
+                <!-- <div class="card-title-container">
+                  <h2 class="card-title">Tetris</h2>
+                </div> -->
+
+                <div class="card-container">
+                  <!-- <ul class="tag-container">
+                    <h3 class="tag-title text">Technologies</h3>
+                    <li class="tag-gradient">
+                      <span class="tag">HTML</span>
+                    </li>
+                    <li class="tag-gradient">
+                      <span class="tag">CSS</span>
+                    </li>
+                    <li class="tag-gradient">
+                      <span class="tag">JavaScript</span>
+                    </li>
+                  </ul> -->
+                </div>
+              </div>
+            </div>
+
+            <div class="glowing-row-bottom">
+              <div class="glowing-row-left-fix"></div>
+
+              <span data-glowing-row-arrow-right></span>
+            </div>
+          </section>
+        </div>
+
+        <div class="scroll-fix-id" id="resume" style="margin-top: 2px"></div>
+        <div data-scroll-fix>
+          <section class="resume-container">
+            <h1 class="h1">Work Experience</h1>
+
+            <a data-nav-link class="nav-link" href="/resume.pdf" download
+              >Download Resume</a
+            >
+          </section>
+        </div>
+
+        <div class="scroll-fix-id" id="contact"></div>
+        <div data-scroll-fix>
+          <section class="contact-bg">
+            <h1 class="h1">Get In Touch</h1>
+          </section>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="flex-center-end footer-icon">
+          <a
+            class="icon-link"
+            href="https://github.com/Mental-Block"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img class="icon" src="images/github.svg" alt="github" />
+          </a>
+          <a
+            class="icon-link"
+            href="https://www.linkedin.com/in/aarontibben/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img class="icon" src="images/linkedin.svg" alt="linkedin" />
+          </a>
+          <a
+            class="icon-link"
+            href="https://leetcode.com/u/dsadsaddsadsa/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img class="icon" src="images/bob.svg" alt="leetcode" />
+          </a>
+        </div>
+
+        <div class="flex-center-center-column">
+          <p style="margin: 0">
+            &#169; 2025 by Aaron Tibben | All Rights reserved
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+
+  <script text="javascript/text" src="./index.js"></script>
+  <script text="javascript/text" src="./focus-visible.polyfill.js"></script>
+  <script
+    text="javascript/text"
+    src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version=4.8.0&features=Element.prototype.classList"
+  ></script>
+</html>
