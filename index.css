@@ -309,7 +309,7 @@ body::after {
   text-shadow: 0.125rem 0.125rem 0.25rem var(--black);
   text-align: center;
   overflow: hidden;
-  background-color: black;
+  background-color: var(--black);
   outline: none;
 }
 
@@ -351,14 +351,23 @@ body::after {
   gap: 2rem;
   padding: 2rem;
   margin: auto;
-
   grid-auto-rows: 1fr;
 }
 
-.skills-img {
-  border-radius: 0.25rem;
-  width: 5rem;
-  border: 1px solid green;
+.skills-card-layout {
+  max-width: 80rem;
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  margin: auto;
+}
+
+.skills-card-layout .card {
+  max-width: 200px;
+  min-width: 10rem;
 }
 
 @media only screen and (min-width: 48em) {
@@ -599,7 +608,7 @@ body::after {
 }
 
 .card {
-  max-width: 80rem;
+  width: 100%;
   padding: 1em 1.25em;
   background-color: var(--secondary-bg);
   border-radius: 0.25rem;
@@ -611,7 +620,8 @@ body::after {
   justify-content: space-between;
 }
 
-.card-content {
+.card-container {
+  margin: auto;
 }
 
 .card-footer {
@@ -626,10 +636,9 @@ body::after {
 }
 
 .card-img {
-  width: 100%;
-  max-width: 320px;
-  border-radius: 4px;
-  margin-top: 20px;
+  text-align: center;
+  display: block;
+  margin: auto;
 }
 
 .card-title {
@@ -640,11 +649,11 @@ body::after {
 }
 
 .card-text {
+  text-align: center;
   margin: 0.25em 1rem;
   font-size: 1.25rem;
   line-height: 28px;
   text-shadow: 1px 1px var(--black);
-  margin: 20px 0 0 0;
   font-family: var(--secondary-font);
   color: var(--tertiary-color);
 }
