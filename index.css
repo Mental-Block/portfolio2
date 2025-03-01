@@ -162,6 +162,7 @@ html,
   --slight-opacity-black: rgba(0, 0, 0, 0.9);
   --half-opacity-black: rgba(0, 0, 0, 0.5);
   --black: #000000;
+  --white: #fff;
 
   --box-shadow: 0 0 0.0625rem var(--primary-color),
     0 0 0.125rem var(--primary-color), 0 0 0.3125rem var(--primary-color),
@@ -266,7 +267,7 @@ body::after {
 ##################################################################################################################################
 *********************************************************************************************************************************/
 
-.landing-container {
+.landing {
   box-shadow: var(--box-shadow);
   border: none;
   display: flex;
@@ -277,7 +278,6 @@ body::after {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  margin-bottom: 2rem;
 }
 
 .landing-text {
@@ -322,77 +322,126 @@ body::after {
   background: var(--primary-color);
 }
 
+.primary-btn:focus,
 .landing-btn:focus {
-  text-shadow: 0.125rem 0.125rem 0.25rem var(--black);
-  color: var(--tertiary-color);
-  outline: none;
-  background: var(--primary-color);
-  box-shadow: 0px 0px 3rem var(--primary-color),
-    0px 0px 3rem var(--primary-color), 0px 0px 3rem var(--primary-color),
-    0px 0px 3rem var(--primary-color);
+  outline: var(--white) dotted 0.125rem;
 }
 
-.about-container .card-gradient {
-  margin: 2rem;
+.content-wrapper {
+  max-width: 80rem;
+  margin: auto;
 }
 
-.about-container .card-gradient:nth-child(2) {
-  margin: 0rem 2rem 2rem 2rem;
-}
-/* 
-.skills-container {
+.content-container {
+  position: relative;
   padding: 2rem;
-} */
+}
 
 .projects-card-layout {
-  max-width: 80rem;
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
-  padding: 2rem;
+  padding-top: 4rem;
   margin: auto;
   grid-auto-rows: 1fr;
 }
 
 .skills-card-layout {
-  max-width: 80rem;
   display: flex;
   justify-items: center;
   justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
-  padding: 2rem;
+  padding-top: 4rem;
   margin: auto;
 }
 
 .skills-card-layout .card {
-  max-width: 200px;
-  min-width: 10rem;
+  width: 8.5rem;
+  margin: auto;
+}
+
+.bob {
+  /* display: inline-block; */
+  transition: 0.5s;
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-size: 1.5rem;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.icon-external {
+  transition: 0.5s;
+  fill: var(--secondary-color);
+}
+
+.bob:hover,
+.bob:hover .icon-external {
+  fill: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.resume,
+.about {
+  padding-top: 4rem;
+}
+
+.about .card-gradient:nth-child(1) {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+
+.resume > .flex-center-end {
+  margin-top: 4rem;
 }
 
 @media only screen and (min-width: 48em) {
-  .landing-container {
+  .landing {
     box-shadow: none;
   }
 
-  .skills-container,
-  .about-container {
-    margin-top: 0;
-    position: relative;
-    padding: 4rem 0 4rem 2rem;
+  .skills-card-layout,
+  .projects-card-layout {
+    padding-bottom: 4rem;
   }
 
-  .projects-container .h1 {
+  .about {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    padding-left: 4rem;
+  }
+
+  .skills {
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+    padding-left: 4rem;
+  }
+
+  .about .card-gradient:nth-child(1) {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .about .card-gradient:nth-child(2) {
+    margin-bottom: 4rem;
+  }
+
+  /* .about .card-gradient {
+    margin-bottom: 2rem;
+  } */
+
+  /* .skills .content-container,
+  .about .content-container {
+    margin-top: 0;
+    position: relative;
+    padding: 4rem 2rem 4rem 4rem;
+  } */
+
+  .projects .h1 {
     padding: 0.6em 0.75em 0.5em 0.75em;
     border-radius: 0.25rem;
-    line-height: 4rem;
     overflow-y: hidden;
-  }
-
-  .projects-container {
-    margin-top: 0;
-    position: relative;
-    padding: 2rem 0 2rem 0;
   }
 }
 
@@ -407,17 +456,14 @@ body::after {
     margin: auto;
   }
 
-  .projects-container {
-    padding: 3rem 0 5rem 3rem;
+  .skills {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
   }
 
-  .skills-container,
-  .about-container {
-    padding: 5rem 0 5rem 3rem;
-  }
-
-  .about-container .card-gradient:nth-child(2) {
-    margin: 2rem;
+  .about {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 }
 
@@ -466,6 +512,11 @@ body::after {
   align-items: center;
   justify-content: space-between;
 }
+.flex-center-end {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
 
 .flex-center-start {
   display: flex;
@@ -500,8 +551,8 @@ body::after {
   overflow-y: hidden;
   position: relative;
   font-weight: 700;
-  margin: 1em auto;
-  line-height: 3.25rem;
+  margin: 2rem auto;
+  line-height: 2.75rem;
   font-size: 2rem;
   font-size: clamp(2rem, 0.515rem + 1.553vw, 3rem);
   color: var(--primary-color);
@@ -512,7 +563,7 @@ body::after {
 }
 
 .h2 {
-  margin: 0.5em 0;
+  margin-bottom: 0.25em;
   line-height: 2.5rem;
   font-size: 1.5rem;
   font-size: clamp(1.5rem, 0.515rem + 1.553vw, 2rem);
@@ -523,11 +574,21 @@ body::after {
 .text {
   font-size: 1rem;
   font-size: clamp(1rem, 0.939rem + 0.21vw, 2rem);
-  margin-bottom: 1em;
+  margin-bottom: 0.75em;
   line-height: 1.75rem;
   text-shadow: 1px 1px var(--black);
   font-family: var(--secondary-font);
   color: var(--tertiary-color);
+}
+
+.text-alt {
+  font-size: 1rem;
+  margin-bottom: 0.25em;
+  font-size: clamp(1rem, 0.939rem + 0.21vw, 2rem);
+  line-height: 1.5rem;
+  text-shadow: 1px 1px var(--black);
+  font-family: var(--secondary-font);
+  color: var(--secondary-color);
 }
 
 .primary-btn {
@@ -558,14 +619,6 @@ body::after {
   color: var(--tertiary-color);
 }
 
-.primary-btn:focus {
-  text-shadow: 0.125rem 0.125rem 0.25rem var(--black);
-  border: 0.0625 solid rgba(24, 202, 230, 0.95);
-  background: rgba(24, 202, 230, 0.9);
-  color: var(--tertiary-color);
-  outline: none;
-}
-
 .primary-btn-gradient {
   padding: 0.0625rem;
   background: linear-gradient(
@@ -582,7 +635,7 @@ body::after {
   border: none;
 }
 
-.primary-btn-gradient .primary-btn:focus {
+.primary-btn-gradient .primary-btn:active {
   text-shadow: 0.125rem 0.125rem 0.25rem var(--black);
   border: none;
   background: transparent;
@@ -596,7 +649,6 @@ body::after {
 }
 
 .card-gradient {
-  max-width: 80rem;
   padding: 0.125rem;
   background: linear-gradient(
     90deg,
@@ -609,7 +661,7 @@ body::after {
 
 .card {
   width: 100%;
-  padding: 1em 1.25em;
+  padding: 1.5em 1.25em;
   background-color: var(--secondary-bg);
   border-radius: 0.25rem;
   height: 100%;
@@ -620,8 +672,8 @@ body::after {
   justify-content: space-between;
 }
 
-.card-container {
-  margin: auto;
+.card .text:last-child {
+  margin-bottom: 0;
 }
 
 .card-footer {
@@ -650,7 +702,7 @@ body::after {
 
 .card-text {
   text-align: center;
-  margin: 0.25em 1rem;
+  margin: 0.25em auto;
   font-size: 1.25rem;
   line-height: 28px;
   text-shadow: 1px 1px var(--black);
@@ -703,7 +755,7 @@ body::after {
 .tag-container {
   flex-wrap: wrap;
   gap: 0.5em;
-  margin: 0.5rem 0;
+  margin: 0.5em 0;
   display: flex;
   align-items: center;
   justify-content: start;
@@ -1054,6 +1106,10 @@ body::after {
 ##################################################################################################################################
 ##################################################################################################################################
 *********************************************************************************************************************************/
+.glowing-title {
+  position: static;
+}
+
 .glowing-row,
 .glowing-row-bottom,
 .glowing-column-right,
@@ -1159,6 +1215,11 @@ body::after {
 }
 
 @media only screen and (min-width: 48em) {
+  .glowing-title {
+    position: relative;
+    left: -2rem;
+  }
+
   /* cannot have index broswer needs to decide */
   .glowing-column-right {
     position: absolute;
@@ -1349,6 +1410,10 @@ body::after {
 }
 
 @media only screen and (min-width: 90em) {
+  .glowing-title {
+    right: -2.5rem;
+  }
+
   .glowing-column-left,
   .glowing-column-right {
     width: 2.5rem;

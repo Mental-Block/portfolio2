@@ -9,7 +9,7 @@
 
 (() => {
   const { responsive } = utilites();
-  const { ATTR, SCREEN_SIZE } = constants();
+  const { ATTR, SCREEN_SIZE, EVENT } = constants();
   const { appendArrow, removeArrow, appendBoxArrow, removeBoxArrow } =
     ShootingStarAnimation();
 
@@ -21,16 +21,18 @@
   homeAnimation();
   aboutAnimation();
 
-  const aboutHeader = document.querySelector(`.projects-container .h1`);
+  const projectsTitle = document.querySelector(
+    `#projects ~ div[data-scroll-fix] .h1`
+  );
 
   const setup = {
     to: () => {
-      removeArrow(aboutHeader);
-      appendBoxArrow(aboutHeader); // appendBoxArrow must be after removeArrow or BOM can't find element
+      removeArrow(projectsTitle);
+      appendBoxArrow(projectsTitle); // appendBoxArrow must be after removeArrow or BOM can't find element
     },
     from: () => {
-      appendArrow(aboutHeader);
-      removeBoxArrow(aboutHeader); // appendBoxArrow must be after appendArrow or BOM can't find element
+      appendArrow(projectsTitle);
+      removeBoxArrow(projectsTitle); // appendBoxArrow must be after appendArrow or BOM can't find element
     },
   };
 

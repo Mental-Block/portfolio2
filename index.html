@@ -56,7 +56,7 @@
       <main>
         <div id="home"></div>
         <div data-scroll-fix>
-          <section class="landing-container">
+          <section class="landing">
             <div data-home-animation></div>
             <div class="flex-center-center-column">
               <h1 class="landing-text">
@@ -71,7 +71,7 @@
 
         <div class="scroll-fix-id" id="about"></div>
         <div data-scroll-fix style="margin-top: 2px">
-          <section class="about-container">
+          <section class="about content-container">
             <div class="glowing-column-left">
               <!--  hides the arrow transition on start -->
               <div class="glowing-column-top-fix"></div>
@@ -95,109 +95,117 @@
               <span data-glowing-row-arrow-left></span>
             </div>
 
-            <div class="flex-center-center-column">
-              <h1 class="h1" tabindex="0" data-arrow>About Me</h1>
-            </div>
-
-            <div class="flex-center-center-column">
-              <div class="card-gradient">
-                <div class="card">
-                  <h2 class="h2" tabindex="0">TDLR (Short Version)</h2>
-                  <p class="text" tabindex="0">
-                    I'm a Full Stack developer based in Ottawa with over five
-                    years of programming experience, including two years in a
-                    professional setting. I bring stakeholders' visions to life
-                    while following SOLID engineering principles and design
-                    patterns, ensuring that the code I write is maintainable for
-                    future developers. I work for a leading Canadian company at
-                    their manufacturing facility. I maintain, devlope internal
-                    tooling and equipment within manufacturing plant. In my free
-                    time, I am exploring embedded systems and advancing my
-                    learning in DBMS.
-                  </p>
+            <div class="content-wrapper">
+              <div class="glowing-title">
+                <div class="flex-center-center-column">
+                  <h1 class="h1" tabindex="0" data-arrow>About Me</h1>
                 </div>
               </div>
 
-              <div class="card-gradient">
-                <div class="card">
-                  <h2 class="h2" tabindex="0">
-                    My Journey So Far (Long Version)
-                  </h2>
+              <div class="flex-center-center-column">
+                <div class="card-gradient">
+                  <div class="card">
+                    <h2 class="h2" tabindex="0">TDLR (Short Version)</h2>
+                    <p class="text" tabindex="0">
+                      I'm a Full Stack developer based in Ottawa with over five
+                      years of programming experience, including two years in a
+                      professional setting. I bring stakeholders' visions to
+                      life while following SOLID engineering principles and
+                      design patterns, ensuring that the code I write is
+                      maintainable for future developers. In my free time, I am
+                      exploring embedded systems and advancing my learning in
+                      DBMS.
+                    </p>
+                  </div>
+                </div>
 
-                  <p class="text" tabindex="0">
-                    I was first introduced to programming as a junior in high
-                    school after being recommend it by my physics teacher after
-                    doing well in
-                    <a href="/images/award.jpeg" target="_blank" class="link">
-                      Intro To Computers
-                    </a>
-                    which focused more on the hardware aspect of electronics. We
-                    started with the fundamental concepts of programming in
-                    BASIC using a web based enviroment called
-                    <a
-                      class="link"
-                      href="https://www.quitebasic.com"
-                      target="_blank"
-                      rel="noreferrer"
-                      >Quite Basic</a
-                    >. Where I wrote my first code and created my first simple
-                    game. It was a 2d pixel game much like the space invaiders.
-                    I enjoyed the process of figuring out why something didn't
-                    work and how to make it work. Half way through the semester
-                    I had a working and refactored copy completing the material
-                    for that course. Since I finished way earlier than what was
-                    anticipated. I ended up becoming a second resource for other
-                    students who needed help walking them through their logic.
-                    At the end of the year I won the
-                    <a href="/images/award2.jpeg" target="_blank" class="link"
-                      >Computer Science Award</a
-                    >.
-                  </p>
+                <div class="card-gradient">
+                  <div class="card">
+                    <h2 class="h2" tabindex="0">
+                      My Journey So Far (Long Version)
+                    </h2>
 
-                  <p class="text" tabindex="0">
-                    The next year I took Advanced Computer Science as a senior.
-                    This was much more heavily focused on data structures and
-                    algorithms than the first year of understanding the
-                    fundamentals. About 40% of the class dropped out. We started
-                    with stacks, queues and arrays. Then simple sorting
-                    algorithms like bubble and insertion sort. Moving on to
-                    binary search and ending with more advanced array and sub
-                    array techniques like sliding window. Winning again, the
-                    <a href="/images/award3.jpeg" target="_blank" class="link">
-                      Computer Science Award</a
-                    >. Graduating that year.
-                  </p>
+                    <p class="text" tabindex="0">
+                      I was first introduced to programming as a junior in high
+                      school after being recommend it by my physics teacher
+                      after doing well in
+                      <a href="/images/award.jpeg" target="_blank" class="link">
+                        Intro To Computers
+                      </a>
+                      which focused more on the hardware aspect of electronics.
+                      We started with the fundamental concepts of programming in
+                      BASIC using a web based enviroment called
+                      <a
+                        class="link"
+                        href="https://www.quitebasic.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Quite Basic</a
+                      >. Where I wrote my first code and created my first simple
+                      game. It was a 2d pixel game much like the space
+                      invaiders. I enjoyed the process of figuring out why
+                      something didn't work and how to make it work. Half way
+                      through the semester I had a working and refactored copy
+                      completing the material for that course. Since I finished
+                      way earlier than what was anticipated. I ended up becoming
+                      a second resource for other students who needed help
+                      walking them through their logic. At the end of the year I
+                      won the
+                      <a href="/images/award2.jpeg" target="_blank" class="link"
+                        >Computer Science Award</a
+                      >.
+                    </p>
 
-                  <p class="text" tabindex="0">
-                    I took a year off from school, learning web development on
-                    the side when the covid-19 pandemic hit. At that time I was
-                    fortunate enough to have work being a construction labour
-                    moving concrete blocks and stone. After a couple summers I
-                    became tired of working in the cold and applied for a
-                    factory position. I was hired during this time, I became
-                    frustrated with inefficient internal processes and thought I
-                    could build a better system. So, after work I go home
-                    straight to the computer. The project is
-                    <a
-                      href="https://github.com/Mental-Block/smt-calc"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="link"
-                      >SMT CALC</a
-                    >
-                    if your intrested and can get it running. The code is
-                    garbage. I've come a long way since then. Fortunately, it
-                    did solve a business case and the director of manufacturing
-                    eng. and operational technology manager were willing to
-                    invest in me.
-                  </p>
+                    <p class="text" tabindex="0">
+                      The next year I took Advanced Computer Science as a
+                      senior. This was much more heavily focused on data
+                      structures and algorithms than the first year of
+                      understanding the fundamentals. About 40% of the class
+                      dropped out. We started with stacks, queues and arrays.
+                      Then simple sorting algorithms like bubble and insertion
+                      sort. Moving on to binary search and ending with more
+                      advanced array and sub array techniques like sliding
+                      window. Winning again, the
+                      <a
+                        href="/images/award3.jpeg"
+                        target="_blank"
+                        class="link"
+                      >
+                        Computer Science Award</a
+                      >. Graduating that year.
+                    </p>
 
-                  <p class="text" tabindex="0">
-                    At that role and I maintained and developed internal
-                    software within manufacturing plant. In my free time, I am
-                    exploring embedded systems and advancing my learning in
-                    DBMS.
-                  </p>
+                    <p class="text" tabindex="0">
+                      I took a year off from school, learning web development on
+                      the side when the covid-19 pandemic hit. At that time I
+                      was fortunate enough to have work being a construction
+                      labour moving concrete blocks and stone. After a couple
+                      summers I became tired of working in the cold and applied
+                      for a factory position. I was hired during this time, I
+                      became frustrated with inefficient internal processes and
+                      thought I could build a better system. So, after work I go
+                      home straight to the computer. The project is
+                      <a
+                        href="https://github.com/Mental-Block/smt-calc"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="link"
+                        >SMT CALC</a
+                      >
+                      if your intrested and can get it running. The code is
+                      garbage. I've come a long way since then. Fortunately, it
+                      did solve a business case and the director of
+                      manufacturing eng. and operational technology manager were
+                      willing to invest in me.
+                    </p>
+
+                    <p class="text" tabindex="0">
+                      At that role and I maintained and developed internal
+                      software within manufacturing plant. In my free time, I am
+                      exploring embedded systems and advancing my learning in
+                      DBMS.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -212,12 +220,12 @@
 
         <div class="scroll-fix-id" id="projects"></div>
         <div data-scroll-fix style="margin-top: 2px">
-          <section class="projects-container">
-            <div class="flex-center-center-row">
+          <section class="projects content-container">
+            <div class="flex-center-center-column content-wrapper">
               <h1 class="h1">Projects</h1>
             </div>
 
-            <div class="projects-card-layout">
+            <div class="projects-card-layout content-wrapper">
               <div class="card-gradient">
                 <div class="card">
                   <div class="card-title-container">
@@ -226,7 +234,6 @@
 
                   <div class="card-content">
                     <ul class="tag-container">
-                      <h3 class="tag-title">Technologies</h3>
                       <li class="tag-gradient">
                         <span class="tag">TypeScript</span>
                       </li>
@@ -280,7 +287,6 @@
 
                   <div class="card-container">
                     <ul class="tag-container">
-                      <h3 class="tag-title text">Technologies</h3>
                       <li class="tag-gradient">
                         <span class="tag">Logic Gates</span>
                       </li>
@@ -319,7 +325,6 @@
 
                   <div class="card-container">
                     <ul class="tag-container">
-                      <h3 class="tag-title text">Technologies</h3>
                       <li class="tag-gradient">
                         <span class="tag">HTML</span>
                       </li>
@@ -338,7 +343,14 @@
 
                   <div class="card-footer">
                     <div class="primary-btn-gradient">
-                      <button class="primary-btn">Find Out More</button>
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://tetris100.netlify.app/"
+                        class="primary-btn"
+                      >
+                        Find Out More
+                      </a>
                     </div>
                     <div class="primary-btn-gradient">
                       <button class="primary-btn">Source Code</button>
@@ -352,7 +364,7 @@
 
         <div class="scroll-fix-id" id="tech"></div>
         <div data-scroll-fix>
-          <section class="skills-container">
+          <section class="skills content-container">
             <div class="glowing-column-left">
               <!--  hides the arrow transition on start -->
               <div class="glowing-column-top-fix"></div>
@@ -376,16 +388,22 @@
               <span data-glowing-row-arrow-left></span>
             </div>
 
-            <div class="flex-center-center-row">
-              <h1 class="h1" data-arrow>Frequently Used Tech</h1>
+            <div class="glowing-title">
+              <div class="flex-center-center-row content-wrapper">
+                <h1 class="h1" data-arrow>Frequently Used Tech</h1>
+              </div>
             </div>
 
-            <div class="skills-card-layout">
+            <div class="skills-card-layout content-wrapper">
               <div class="card-gradient">
                 <div class="card">
                   <div class="card-container">
-                    <img class="card-img" src="/images/angular.svg" />
-                    <p class="card-text">Angular</p>
+                    <img
+                      class="card-img"
+                      src="./images/angular.svg"
+                      alt="Angular"
+                    />
+                    <p class="card-text" tabindex="0">Angular</p>
                   </div>
                 </div>
               </div>
@@ -393,8 +411,12 @@
               <div class="card-gradient">
                 <div class="card">
                   <div class="card-container">
-                    <img class="card-img" src="/images/react.svg" />
-                    <p class="card-text">React</p>
+                    <img
+                      class="card-img"
+                      src="./images/react.svg"
+                      alt="React"
+                    />
+                    <p class="card-text" tabindex="0">React</p>
                   </div>
                 </div>
               </div>
@@ -402,8 +424,8 @@
               <div class="card-gradient">
                 <div class="card">
                   <div class="card-container">
-                    <img class="card-img" src="/images/css.svg" />
-                    <p class="card-text">CSS</p>
+                    <img class="card-img" src="./images/css.svg" alt="CSS" />
+                    <p class="card-text" tabindex="0">CSS</p>
                   </div>
                 </div>
               </div>
@@ -411,8 +433,12 @@
               <div class="card-gradient">
                 <div class="card">
                   <div class="card-container">
-                    <img class="card-img" src="/images/html.svg" />
-                    <p class="card-text">HTML</p>
+                    <img
+                      class="card-img"
+                      src="./images/javascript.svg"
+                      alt="Javascript"
+                    />
+                    <p class="card-text" tabindex="0">JavaScript</p>
                   </div>
                 </div>
               </div>
@@ -420,8 +446,8 @@
               <div class="card-gradient">
                 <div class="card">
                   <div class="card-container">
-                    <img class="card-img" src="/images/javascript.svg" />
-                    <p class="card-text">JavaScript</p>
+                    <img class="card-img" src="./images/html.svg" alt="HTML" />
+                    <p class="card-text" tabindex="0">HTML</p>
                   </div>
                 </div>
               </div>
@@ -429,8 +455,12 @@
               <div class="card-gradient">
                 <div class="card">
                   <div class="card-container">
-                    <img class="card-img" src="/images/sqlServer.svg" />
-                    <p class="card-text">SQL Server</p>
+                    <img
+                      class="card-img"
+                      src="./images/sqlServer.svg"
+                      alt="SQL Server"
+                    />
+                    <p class="card-text" tabindex="0">SQL Server</p>
                   </div>
                 </div>
               </div>
@@ -438,8 +468,8 @@
               <div class="card-gradient">
                 <div class="card">
                   <div class="card-container">
-                    <img class="card-img" src="/images/c.svg" />
-                    <p class="card-text">C#</p>
+                    <img class="card-img" src="./images/c.svg" alt="C Sharpe" />
+                    <p class="card-text" tabindex="0">C#</p>
                   </div>
                 </div>
               </div>
@@ -455,25 +485,178 @@
 
         <div class="scroll-fix-id" id="resume" style="margin-top: 2px"></div>
         <div data-scroll-fix>
-          <section class="resume-container">
-            <h1 class="h1">Work Experience</h1>
+          <section class="resume content-container content-wrapper">
+            <div class="flex-center-center-row">
+              <h1 class="h1" data-arrow>Experience</h1>
+            </div>
 
-            <a data-nav-link class="nav-link" href="/aaron-tibben.pdf" download
-              >Download Resume</a
-            >
+            <div class="flex-center-end">
+              <div class="primary-btn-gradient">
+                <a class="primary-btn" href="/aaron-tibben.pdf" download
+                  >Download Resume</a
+                >
+              </div>
+            </div>
+
+            <div class="card-gradient" style="margin-top: 2rem">
+              <div class="card">
+                <div>
+                  <p class="text-alt">Dec 2023 - Feb 2025</p>
+
+                  <h2 class="h2">
+                    Programmer Analyst -
+                    <a
+                      href="https://rossvideo.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="bob"
+                    >
+                      Ross Video
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        width="1rem"
+                        height="1rem"
+                        class="icon-external"
+                      >
+                        <path
+                          d="M 19.980469 2.9902344 A 1.0001 1.0001 0 0 0 19.869141 3 L 15 3 A 1.0001 1.0001 0 1 0 15 5 L 17.585938 5 L 8.2929688 14.292969 A 1.0001 1.0001 0 1 0 9.7070312 15.707031 L 19 6.4140625 L 19 9 A 1.0001 1.0001 0 1 0 21 9 L 21 4.1269531 A 1.0001 1.0001 0 0 0 19.980469 2.9902344 z M 5 3 C 3.9069372 3 3 3.9069372 3 5 L 3 19 C 3 20.093063 3.9069372 21 5 21 L 19 21 C 20.093063 21 21 20.093063 21 19 L 21 13 A 1.0001 1.0001 0 1 0 19 13 L 19 19 L 5 19 L 5 5 L 11 5 A 1.0001 1.0001 0 1 0 11 3 L 5 3 z"
+                        />
+                      </svg>
+                    </a>
+                  </h2>
+
+                  <p class="text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Donec venenatis, purus a mattis hendrerit, nisl risus
+                    hendrerit lacus, sed volutpat lorem ligula vel velit. Proin
+                    lectus diam, volutpat eu libero eu, mattis fermentum turpis.
+                    Vestibulum ut pretium nunc. Maecenas ultricies tristique
+                    luctus. Vestibulum a efficitur tortor. Cras lacinia
+                    hendrerit vulputate. Fusce vel ultricies augue. Mauris
+                    vehicula metus at vulputate pulvinar. Vestibulum in rhoncus
+                    arcu, id fermentum risus. Fusce et fermentum ligula, sed
+                    ullamcorper turpis. Duis ligula nulla, aliquam eget nisl a,
+                    tincidunt dictum dolor. Nulla iaculis ac lorem eget laoreet.
+                    Duis id est bibendum, egestas tortor eu, varius orci.
+                  </p>
+
+                  <ul class="tag-container">
+                    <li class="tag-gradient">
+                      <span class="tag">HTML</span>
+                    </li>
+                    <li class="tag-gradient">
+                      <span class="tag">CSS</span>
+                    </li>
+                    <li class="tag-gradient">
+                      <span class="tag">JavaScript</span>
+                    </li>
+                    <li class="tag-gradient">
+                      <span class="tag">Angular</span>
+                    </li>
+                    <li class="tag-gradient">
+                      <span class="tag">SQL Server</span>
+                    </li>
+                    <li class="tag-gradient">
+                      <span class="tag">C#</span>
+                    </li>
+                    <li class="tag-gradient">
+                      <span class="tag">.net</span>
+                    </li>
+                    <li class="tag-gradient">
+                      <span class="tag">Entity Framework</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-gradient" style="margin-top: 2rem">
+              <div class="card">
+                <p class="text-alt">Dec 2022 - Feb 2023</p>
+
+                <h2 class="h2">
+                  Manufacturing Systems Specialist -
+                  <a
+                    href="https://rossvideo.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="bob"
+                  >
+                    Ross Video
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="1rem"
+                      height="1rem"
+                      class="icon-external"
+                    >
+                      <path
+                        d="M 19.980469 2.9902344 A 1.0001 1.0001 0 0 0 19.869141 3 L 15 3 A 1.0001 1.0001 0 1 0 15 5 L 17.585938 5 L 8.2929688 14.292969 A 1.0001 1.0001 0 1 0 9.7070312 15.707031 L 19 6.4140625 L 19 9 A 1.0001 1.0001 0 1 0 21 9 L 21 4.1269531 A 1.0001 1.0001 0 0 0 19.980469 2.9902344 z M 5 3 C 3.9069372 3 3 3.9069372 3 5 L 3 19 C 3 20.093063 3.9069372 21 5 21 L 19 21 C 20.093063 21 21 20.093063 21 19 L 21 13 A 1.0001 1.0001 0 1 0 19 13 L 19 19 L 5 19 L 5 5 L 11 5 A 1.0001 1.0001 0 1 0 11 3 L 5 3 z"
+                      />
+                    </svg>
+                  </a>
+                </h2>
+
+                <p class="text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                  venenatis, purus a mattis hendrerit, nisl risus hendrerit
+                  lacus, sed volutpat lorem ligula vel velit. Proin lectus diam,
+                  volutpat eu libero eu, mattis fermentum turpis. Vestibulum ut
+                  pretium nunc. Maecenas ultricies tristique luctus. Vestibulum
+                  a efficitur tortor. Cras lacinia hendrerit vulputate. Fusce
+                  vel ultricies augue. Mauris vehicula metus at vulputate
+                  pulvinar. Vestibulum in rhoncus arcu, id fermentum risus.
+                  Fusce et fermentum ligula, sed ullamcorper turpis. Duis ligula
+                  nulla, aliquam eget nisl a, tincidunt dictum dolor. Nulla
+                  iaculis ac lorem eget laoreet. Duis id est bibendum, egestas
+                  tortor eu, varius orci.
+                </p>
+
+                <ul class="tag-container">
+                  <li class="tag-gradient">
+                    <span class="tag">HTML</span>
+                  </li>
+                  <li class="tag-gradient">
+                    <span class="tag">CSS</span>
+                  </li>
+                  <li class="tag-gradient">
+                    <span class="tag">JavaScript</span>
+                  </li>
+                  <li class="tag-gradient">
+                    <span class="tag">Angular</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </section>
         </div>
 
         <div class="scroll-fix-id" id="contact"></div>
         <div data-scroll-fix>
           <section class="contact-bg">
-            <h1 class="h1">Get In Touch</h1>
+            <div class="flex-center-center-row">
+              <h1 class="h1" data-arrow>Get In Touch</h1>
+            </div>
+
+            <form>
+              <label for="email">Email</label>
+              <input type="text" id="email" name="email" />
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" />
+              <label for="description">Description</label>
+              <textarea
+                type="text"
+                id="description"
+                name="description"
+              ></textarea>
+            </form>
           </section>
         </div>
       </main>
 
       <footer class="footer">
-        <div class="flex-center-end footer-icon">
+        <div class="flex-center-end footer-icon content-wrapper">
           <a
             class="icon-link"
             href="https://github.com/Mental-Block"
