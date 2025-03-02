@@ -6,12 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./index.css" />
     <title>Aaron's Portfolio</title>
+    <meta
+      name="description"
+      content="If you're looking for a software developer portfolio by the name of Aaron Tibben while you found it."
+    />
   </head>
   <body>
     <div class="page-wrapper">
       <header>
         <nav class="nav" aria-label="main menu">
-          <a class="nav-logo" alt="logo" href="#home"></a>
+          <a class="nav-logo" alt="logo" href="#home">[AT]</a>
 
           <span id="nav-label" hidden>Navigation</span>
           <button
@@ -71,7 +75,7 @@
 
         <div class="scroll-fix-id" id="about"></div>
         <div data-scroll-fix style="margin-top: 2px">
-          <section class="about content-container">
+          <section aria-label="About Me" class="about content-container">
             <div class="glowing-column-left">
               <!--  hides the arrow transition on start -->
               <div class="glowing-column-top-fix"></div>
@@ -220,7 +224,10 @@
 
         <div class="scroll-fix-id" id="projects"></div>
         <div data-scroll-fix style="margin-top: 2px">
-          <section class="projects content-container">
+          <section
+            aria-label="Selected projects"
+            class="projects content-container"
+          >
             <div class="flex-center-center-column content-wrapper">
               <h1 class="h1">Projects</h1>
             </div>
@@ -233,7 +240,7 @@
                   </div>
 
                   <div class="card-content">
-                    <ul class="tag-container">
+                    <ul class="tag-container" aria-label="Technologies used">
                       <li class="tag-gradient">
                         <span class="tag">TypeScript</span>
                       </li>
@@ -281,12 +288,13 @@
 
               <div class="card-gradient">
                 <div class="card">
+                  <div class="overlay"></div>
                   <div class="card-title-container">
                     <h2 class="card-title">8 Bit Computer</h2>
                   </div>
 
                   <div class="card-container">
-                    <ul class="tag-container">
+                    <ul class="tag-container" aria-label="Technologies used">
                       <li class="tag-gradient">
                         <span class="tag">Logic Gates</span>
                       </li>
@@ -300,18 +308,26 @@
                         <span class="tag">BASIC</span>
                       </li>
                     </ul>
-
-                    <div>
-                      <img />
-                    </div>
                   </div>
 
                   <div class="card-footer">
                     <div class="primary-btn-gradient">
-                      <button class="primary-btn">Find Out More</button>
+                      <button
+                        class="primary-btn"
+                        tabindex="-1"
+                        aria-hidden="true"
+                      >
+                        Find Out More
+                      </button>
                     </div>
                     <div class="primary-btn-gradient">
-                      <button class="primary-btn">Source Code</button>
+                      <button
+                        class="primary-btn"
+                        tabindex="-1"
+                        aria-hidden="true"
+                      >
+                        Source Code
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -324,7 +340,7 @@
                   </div>
 
                   <div class="card-container">
-                    <ul class="tag-container">
+                    <ul class="tag-container" aria-label="Technologies used">
                       <li class="tag-gradient">
                         <span class="tag">HTML</span>
                       </li>
@@ -335,10 +351,6 @@
                         <span class="tag">JavaScript</span>
                       </li>
                     </ul>
-
-                    <div>
-                      <img />
-                    </div>
                   </div>
 
                   <div class="card-footer">
@@ -349,11 +361,17 @@
                         href="https://tetris100.netlify.app/"
                         class="primary-btn"
                       >
-                        Find Out More
+                        To Site
                       </a>
                     </div>
                     <div class="primary-btn-gradient">
-                      <button class="primary-btn">Source Code</button>
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://github.com/mental-block/tetris"
+                        class="primary-btn"
+                        >Source Code</a
+                      >
                     </div>
                   </div>
                 </div>
@@ -364,7 +382,10 @@
 
         <div class="scroll-fix-id" id="tech"></div>
         <div data-scroll-fix>
-          <section class="skills content-container">
+          <section
+            aria-label="Selected technologies"
+            class="skills content-container"
+          >
             <div class="glowing-column-left">
               <!--  hides the arrow transition on start -->
               <div class="glowing-column-top-fix"></div>
@@ -485,7 +506,10 @@
 
         <div class="scroll-fix-id" id="resume" style="margin-top: 2px"></div>
         <div data-scroll-fix>
-          <section class="resume content-container content-wrapper">
+          <section
+            aria-label="My resume"
+            class="resume content-container content-wrapper"
+          >
             <div class="flex-center-center-row">
               <h1 class="h1" data-arrow>Experience</h1>
             </div>
@@ -501,7 +525,7 @@
             <div class="card-gradient" style="margin-top: 2rem">
               <div class="card">
                 <div>
-                  <p class="text-alt">Dec 2023 - Feb 2025</p>
+                  <header class="text-alt">Dec 2023 - Feb 2025</header>
 
                   <h2 class="h2">
                     Programmer Analyst -
@@ -509,7 +533,7 @@
                       href="https://rossvideo.com"
                       target="_blank"
                       rel="noopener noreferrer"
-                      class="bob"
+                      class="external"
                     >
                       Ross Video
                       <svg
@@ -527,21 +551,20 @@
                   </h2>
 
                   <p class="text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Donec venenatis, purus a mattis hendrerit, nisl risus
-                    hendrerit lacus, sed volutpat lorem ligula vel velit. Proin
-                    lectus diam, volutpat eu libero eu, mattis fermentum turpis.
-                    Vestibulum ut pretium nunc. Maecenas ultricies tristique
-                    luctus. Vestibulum a efficitur tortor. Cras lacinia
-                    hendrerit vulputate. Fusce vel ultricies augue. Mauris
-                    vehicula metus at vulputate pulvinar. Vestibulum in rhoncus
-                    arcu, id fermentum risus. Fusce et fermentum ligula, sed
-                    ullamcorper turpis. Duis ligula nulla, aliquam eget nisl a,
-                    tincidunt dictum dolor. Nulla iaculis ac lorem eget laoreet.
-                    Duis id est bibendum, egestas tortor eu, varius orci.
+                    Build, style, and ship high-quality websites, design
+                    systems, mobile apps, and digital experiences for a diverse
+                    array of projects for clients including Harvard Business
+                    School, Everytown for Gun Safety, Pratt Institute, Koala
+                    Health, Vanderbilt University, The 19th News, and more.
+                    Provide leadership within engineering department through
+                    close collaboration, knowledge shares, and spearheading the
+                    development of internal tools.
                   </p>
 
-                  <ul class="tag-container">
+                  <ul
+                    class="tag-container"
+                    aria-label="Technologies used at this job"
+                  >
                     <li class="tag-gradient">
                       <span class="tag">HTML</span>
                     </li>
@@ -573,7 +596,7 @@
 
             <div class="card-gradient" style="margin-top: 2rem">
               <div class="card">
-                <p class="text-alt">Dec 2022 - Feb 2023</p>
+                <header class="text-alt">Dec 2022 - Feb 2023</header>
 
                 <h2 class="h2">
                   Manufacturing Systems Specialist -
@@ -581,7 +604,7 @@
                     href="https://rossvideo.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="bob"
+                    class="external"
                   >
                     Ross Video
                     <svg
@@ -599,21 +622,20 @@
                 </h2>
 
                 <p class="text">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                  venenatis, purus a mattis hendrerit, nisl risus hendrerit
-                  lacus, sed volutpat lorem ligula vel velit. Proin lectus diam,
-                  volutpat eu libero eu, mattis fermentum turpis. Vestibulum ut
-                  pretium nunc. Maecenas ultricies tristique luctus. Vestibulum
-                  a efficitur tortor. Cras lacinia hendrerit vulputate. Fusce
-                  vel ultricies augue. Mauris vehicula metus at vulputate
-                  pulvinar. Vestibulum in rhoncus arcu, id fermentum risus.
-                  Fusce et fermentum ligula, sed ullamcorper turpis. Duis ligula
-                  nulla, aliquam eget nisl a, tincidunt dictum dolor. Nulla
-                  iaculis ac lorem eget laoreet. Duis id est bibendum, egestas
-                  tortor eu, varius orci.
+                  Build, style, and ship high-quality websites, design systems,
+                  mobile apps, and digital experiences for a diverse array of
+                  projects for clients including Harvard Business School,
+                  Everytown for Gun Safety, Pratt Institute, Koala Health,
+                  Vanderbilt University, The 19th News, and more. Provide
+                  leadership within engineering department through close
+                  collaboration, knowledge shares, and spearheading the
+                  development of internal tools.
                 </p>
 
-                <ul class="tag-container">
+                <ul
+                  class="tag-container"
+                  aria-label="Technologies used at this job"
+                >
                   <li class="tag-gradient">
                     <span class="tag">HTML</span>
                   </li>
@@ -634,53 +656,80 @@
 
         <div class="scroll-fix-id" id="contact"></div>
         <div data-scroll-fix>
-          <section class="contact-bg">
+          <section class="contact content-container content-wrapper">
             <div class="flex-center-center-row">
               <h1 class="h1" data-arrow>Get In Touch</h1>
             </div>
 
-            <form>
-              <label for="email">Email</label>
-              <input type="text" id="email" name="email" />
-              <label for="subject">Subject</label>
-              <input type="text" id="subject" name="subject" />
-              <label for="description">Description</label>
-              <textarea
-                type="text"
-                id="description"
-                name="description"
-              ></textarea>
-            </form>
+            <div class="card-gradient">
+              <div class="card">
+                <h2 class="h2">Other ways to connect</h2>
+
+                <div class="tag-gradient">
+                  <div class="tag">
+                    <a
+                      class="link"
+                      href="https://www.linkedin.com/in/aarontibben/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Linkedin
+                    </a>
+                  </div>
+                </div>
+
+                <a class="link" href="mailto:aaron.tibben@gmail.com">
+                  aaron.tibben@gmail.com
+                </a>
+
+                <h2 class="h2">Dread Contact Form</h2>
+                <form class="form">
+                  <label class="label" for="email">Email</label>
+                  <input type="text" id="email" name="email" />
+                  <label class="label" for="subject">Subject</label>
+                  <input type="text" id="subject" name="subject" />
+                  <label class="label" for="description">Description</label>
+                  <textarea
+                    type="text"
+                    id="description"
+                    name="description"
+                  ></textarea>
+                  <button type="submit" class="primary-btn">Submit</button>
+                </form>
+              </div>
+            </div>
           </section>
         </div>
       </main>
 
       <footer class="footer">
         <div class="flex-center-end footer-icon content-wrapper">
-          <a
-            class="icon-link"
-            href="https://github.com/Mental-Block"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img class="icon" src="images/github.svg" alt="github" />
-          </a>
-          <a
-            class="icon-link"
-            href="https://www.linkedin.com/in/aarontibben/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img class="icon" src="images/linkedin.svg" alt="linkedin" />
-          </a>
-          <a
-            class="icon-link"
-            href="https://leetcode.com/u/dsadsaddsadsa/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img class="icon" src="images/bob.svg" alt="leetcode" />
-          </a>
+          <div class="flex-center-space" style="width: 8rem">
+            <a
+              class="icon-link"
+              href="https://github.com/Mental-Block"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img class="icon" src="images/github.svg" alt="github" />
+            </a>
+            <a
+              class="icon-link"
+              href="https://www.linkedin.com/in/aarontibben/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img class="icon" src="images/linkedin.svg" alt="linkedin" />
+            </a>
+            <a
+              class="icon-link"
+              href="https://leetcode.com/u/dsadsaddsadsa/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img class="icon" src="images/bob.svg" alt="leetcode" />
+            </a>
+          </div>
         </div>
 
         <div class="flex-center-center-column">

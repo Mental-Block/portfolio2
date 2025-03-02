@@ -361,7 +361,7 @@ body::after {
   margin: auto;
 }
 
-.bob {
+.external {
   /* display: inline-block; */
   transition: 0.5s;
   color: var(--secondary-color);
@@ -376,13 +376,23 @@ body::after {
   fill: var(--secondary-color);
 }
 
-.bob:hover,
-.bob:hover .icon-external {
+.external:hover,
+.external:hover .icon-external {
   fill: var(--primary-color);
   color: var(--primary-color);
 }
 
-.resume,
+.contact {
+  padding-bottom: 4rem;
+}
+
+.bob {
+}
+
+.resume {
+  padding-top: 2rem;
+}
+
 .about {
   padding-top: 4rem;
 }
@@ -393,7 +403,7 @@ body::after {
 }
 
 .resume > .flex-center-end {
-  margin-top: 4rem;
+  margin-top: 3rem;
 }
 
 @media only screen and (min-width: 48em) {
@@ -404,6 +414,10 @@ body::after {
   .skills-card-layout,
   .projects-card-layout {
     padding-bottom: 4rem;
+  }
+
+  .resume {
+    padding-top: 4rem;
   }
 
   .about {
@@ -672,6 +686,28 @@ body::after {
   justify-content: space-between;
 }
 
+.overlay {
+  position: absolute;
+  z-index: 2;
+  background-color: var(--half-opacity-black);
+  left: 0rem;
+  top: 0rem;
+  bottom: 0;
+  right: 0;
+}
+
+.overlay::after {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  content: "ON HOLD";
+  font-family: var(--primary-font);
+  font-size: clamp(1.5rem, 0.515rem + 1.553vw, 2rem);
+  color: var(--primary-color);
+}
+
 .card .text:last-child {
   margin-bottom: 0;
 }
@@ -679,7 +715,6 @@ body::after {
 .card-footer {
   margin-top: auto;
   gap: 0.5em;
-  padding: 0.5rem 0;
   display: flex;
   align-items: center;
   justify-content: start;
@@ -934,10 +969,6 @@ body::after {
   padding: 0;
   font-family: var(--primary-font);
   color: var(--primary-color);
-}
-
-.nav-logo::after {
-  content: "[AT]";
   font-weight: 600;
   font-size: 1.8rem;
 }
@@ -1055,19 +1086,21 @@ body::after {
 }
 
 .footer {
+  margin-top: 4rem;
   padding: 2rem 2rem 1rem 2rem;
   background-color: var(--primary-bg);
   border-top: 1px solid var(--primary-color);
 }
 
 .footer p {
+  padding-top: 1em;
   font: 1rem;
   font-family: var(--secondary-font);
   color: var(--secondary-color);
 }
 
 .footer-icon {
-  padding: 0.5em;
+  padding: 0.5rem;
 }
 
 @media only screen and (min-width: 48em) {
@@ -1117,16 +1150,15 @@ body::after {
   display: none;
 }
 
-.StyledForm {
-  margin-top: 3em;
-  background: var(--half-opacity-black);
-  box-shadow: var(--box-shadow);
-  padding: 1.25em;
+form {
   width: 100%;
-  max-width: 560px;
+  margin: 0;
+  padding: 0;
+  background-color: var(--secondary-bg);
+  padding: 1.25rem;
 }
 
-.StyledLabel {
+.label {
   font-size: clamp(1rem, 0.939rem + 0.194vw, 1.5rem);
   display: flex;
   align-items: flex-start;
@@ -1136,7 +1168,7 @@ body::after {
   width: inherit;
 }
 
-.StyledInput {
+.input {
   margin-top: 0.5rem;
   font-size: 1rem;
   padding: 0.5em 0;
@@ -1151,18 +1183,18 @@ body::after {
   outline: none;
 }
 
-.StyledInput::placeholder {
+.input::placeholder {
   color: var(--secondary-color);
 }
 
-.StyledInputControl {
+.input-control {
   width: 100%;
   max-width: 800px;
   padding: 0.75em 0;
   margin: 0 auto;
 }
 
-.StyledHelperText {
+.error-text {
   font-family: var(--primary-font);
   color: var(--error);
   font-size: 0.8rem;
@@ -1459,7 +1491,7 @@ body::after {
   .glowing-column-top-fix,
   .glowing-column-bottom-fix {
     width: 2.5rem;
-    height: 1.15rem;
+    height: 1.1rem;
   }
 
   .glowing-row-left-fix {

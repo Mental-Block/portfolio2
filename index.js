@@ -7,9 +7,26 @@
 
 */
 
+async function submit(data, e) {
+  e.preventDefault();
+
+  const res = await fetch("https://formspree.io/f/mrgooybp", {
+    mode: "cors",
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
+  })
+    .then((res) => res.json())
+    .catch((err) => console.error(err));
+
+  if (res.ok === true) {
+    e.target.reset();
+  }
+}
+
 (() => {
   const { responsive } = utilites();
-  const { ATTR, SCREEN_SIZE, EVENT } = constants();
+  const { ATTR, SCREEN_SIZE } = constants();
   const { appendArrow, removeArrow, appendBoxArrow, removeBoxArrow } =
     ShootingStarAnimation();
 
@@ -648,126 +665,141 @@ function aboutAnimation() {
   const { downArrow, leftArrow, rightArrow, getColor } =
     ShootingStarAnimation();
 
-  const rowLeftArrow = document.querySelector("[data-glowing-row-arrow-left]");
-  const rowRightArrow = document.querySelector(
+  const rowLeftArrow = document.querySelectorAll(
+    "[data-glowing-row-arrow-left]"
+  );
+  const rowRightArrow = document.querySelectorAll(
     "[data-glowing-row-arrow-right]"
   );
-  const columnArrow = document.querySelector("[data-glowing-column-arrow]");
+  const columnArrow = document.querySelectorAll("[data-glowing-column-arrow]");
 
   const setupTwo = {
     to: () => {
-      rowRightArrow.innerHTML = rightArrow({
-        position: {
-          value: 1.25,
-          measurement: "rem",
-        },
-        positionTwo: {
-          value: 1.25,
-          measurement: "rem",
-        },
-        speed: {
-          value: 10,
-          measurement: "s",
-        },
-        delay: {
-          value: 4900,
-          measurement: "ms",
-        },
-        color: getColor(0),
+      rowRightArrow.forEach(
+        (el) =>
+          (el.innerHTML = rightArrow({
+            position: {
+              value: 1.25,
+              measurement: "rem",
+            },
+            positionTwo: {
+              value: 1.25,
+              measurement: "rem",
+            },
+            speed: {
+              value: 10,
+              measurement: "s",
+            },
+            delay: {
+              value: 4900,
+              measurement: "ms",
+            },
+            color: getColor(0),
+          }))
+      );
+
+      columnArrow.forEach((el) => {
+        el.innerHTML = downArrow({
+          position: {
+            value: 1.25,
+            measurement: "rem",
+          },
+          positionTwo: {
+            value: 1.25,
+            measurement: "rem",
+          },
+          speed: {
+            value: 10,
+            measurement: "s",
+          },
+          delay: {
+            value: 2500,
+            measurement: "ms",
+          },
+          color: getColor(0),
+        });
       });
 
-      columnArrow.innerHTML = downArrow({
-        position: {
-          value: 1.25,
-          measurement: "rem",
-        },
-        positionTwo: {
-          value: 1.25,
-          measurement: "rem",
-        },
-        speed: {
-          value: 10,
-          measurement: "s",
-        },
-        delay: {
-          value: 2500,
-          measurement: "ms",
-        },
-        color: getColor(0),
-      });
+      rowLeftArrow.forEach((el) => {
+        el.innerHTML = leftArrow({
+          position: {
+            value: 1.25,
+            measurement: "rem",
+          },
+          positionTwo: {
+            value: 1.25,
+            measurement: "rem",
+          },
+          speed: {
+            value: 10,
+            measurement: "s",
+          },
 
-      rowLeftArrow.innerHTML = leftArrow({
-        position: {
-          value: 1.25,
-          measurement: "rem",
-        },
-        positionTwo: {
-          value: 1.25,
-          measurement: "rem",
-        },
-        speed: {
-          value: 10,
-          measurement: "s",
-        },
-
-        color: getColor(0),
+          color: getColor(0),
+        });
       });
     },
     from: () => {
-      rowRightArrow.innerHTML = rightArrow({
-        position: {
-          value: 1,
-          measurement: "rem",
-        },
-        positionTwo: {
-          value: 1,
-          measurement: "rem",
-        },
-        speed: {
-          value: 10,
-          measurement: "s",
-        },
-        delay: {
-          value: 4900,
-          measurement: "ms",
-        },
-        color: getColor(0),
+      rowRightArrow.forEach((el) => {
+        el.innerHTML = rightArrow({
+          position: {
+            value: 1,
+            measurement: "rem",
+          },
+          positionTwo: {
+            value: 1,
+            measurement: "rem",
+          },
+          speed: {
+            value: 10,
+            measurement: "s",
+          },
+          delay: {
+            value: 4900,
+            measurement: "ms",
+          },
+          color: getColor(0),
+        });
       });
 
-      columnArrow.innerHTML = downArrow({
-        position: {
-          value: 1,
-          measurement: "rem",
-        },
-        positionTwo: {
-          value: 1,
-          measurement: "rem",
-        },
-        speed: {
-          value: 10,
-          measurement: "s",
-        },
-        delay: {
-          value: 2500,
-          measurement: "ms",
-        },
-        color: getColor(0),
+      columnArrow.forEach((el) => {
+        el.innerHTML = downArrow({
+          position: {
+            value: 1,
+            measurement: "rem",
+          },
+          positionTwo: {
+            value: 1,
+            measurement: "rem",
+          },
+          speed: {
+            value: 10,
+            measurement: "s",
+          },
+          delay: {
+            value: 2500,
+            measurement: "ms",
+          },
+          color: getColor(0),
+        });
       });
 
-      rowLeftArrow.innerHTML = leftArrow({
-        position: {
-          value: 1,
-          measurement: "rem",
-        },
-        positionTwo: {
-          value: 1,
-          measurement: "rem",
-        },
-        speed: {
-          value: 10,
-          measurement: "s",
-        },
-        color: getColor(0),
+      rowLeftArrow.forEach((el) => {
+        el.innerHTML = leftArrow({
+          position: {
+            value: 1,
+            measurement: "rem",
+          },
+          positionTwo: {
+            value: 1,
+            measurement: "rem",
+          },
+          speed: {
+            value: 10,
+            measurement: "s",
+          },
+          color: getColor(0),
+        });
       });
     },
   };
