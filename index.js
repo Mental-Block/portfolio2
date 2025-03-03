@@ -7,23 +7,6 @@
 
 */
 
-async function submit(data, e) {
-  e.preventDefault();
-
-  const res = await fetch("https://formspree.io/f/mrgooybp", {
-    mode: "cors",
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(data),
-  })
-    .then((res) => res.json())
-    .catch((err) => console.error(err));
-
-  if (res.ok === true) {
-    e.target.reset();
-  }
-}
-
 (() => {
   const { responsive } = utilites();
   const { ATTR, SCREEN_SIZE } = constants();
@@ -38,22 +21,22 @@ async function submit(data, e) {
   homeAnimation();
   aboutAnimation();
 
-  const projectsTitle = document.querySelector(
-    `#projects ~ div[data-scroll-fix] .h1`
-  );
+  const btn = document.querySelector(`#submit`);
 
-  const setup = {
-    to: () => {
-      removeArrow(projectsTitle);
-      appendBoxArrow(projectsTitle); // appendBoxArrow must be after removeArrow or BOM can't find element
-    },
-    from: () => {
-      appendArrow(projectsTitle);
-      removeBoxArrow(projectsTitle); // appendBoxArrow must be after appendArrow or BOM can't find element
-    },
-  };
+  appendBoxArrow(btn);
 
-  const cleanup = responsive(SCREEN_SIZE.mobileToDesktop, setup, setup);
+  // const setup = {
+  //   to: () => {
+  //     removeArrow(projectsTitle);
+  //     // appendBoxArrow must be after removeArrow or BOM can't find element
+  //   },
+  //   from: () => {
+  //     appendArrow(projectsTitle);
+  //     removeBoxArrow(projectsTitle); // appendBoxArrow must be after appendArrow or BOM can't find element
+  //   },
+  // };
+
+  // const cleanup = responsive(SCREEN_SIZE.mobileToDesktop, setup, setup);
 
   headerArrow.forEach((el) => appendArrow(el));
 
