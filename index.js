@@ -1,46 +1,14 @@
-/* 
-  TODO: 
-
-  - move burger out of "main" exicution path into navigation func
-  - move navigation out of "main" exicution path into navigation func
-  - refactor animation hook
-
-*/
-
 (() => {
-  const { responsive } = utilites();
-  const { ATTR, SCREEN_SIZE } = constants();
-  const { appendArrow, removeArrow, appendBoxArrow, removeBoxArrow } =
-    ShootingStarAnimation();
+  const _ = navigation();
+  /* 
+    _ is the clean up functions to run to remove event listeners 
+    _.forEach((cleanupfunc) => cleanupfunc());
+   */
 
-  const headerArrow = Array.from(
-    document.querySelectorAll(`[${ATTR.dataArrow}]`)
-  );
-
-  const cleanupEventListenersArray = navigation();
   homeAnimation();
-  aboutAnimation();
-
-  const btn = document.querySelector(`#submit`);
-
-  appendBoxArrow(btn);
-
-  // const setup = {
-  //   to: () => {
-  //     removeArrow(projectsTitle);
-  //     // appendBoxArrow must be after removeArrow or BOM can't find element
-  //   },
-  //   from: () => {
-  //     appendArrow(projectsTitle);
-  //     removeBoxArrow(projectsTitle); // appendBoxArrow must be after appendArrow or BOM can't find element
-  //   },
-  // };
-
-  // const cleanup = responsive(SCREEN_SIZE.mobileToDesktop, setup, setup);
-
-  headerArrow.forEach((el) => appendArrow(el));
-
-  //cleanEventListenersArray.forEach((cleanupfunc) => cleanupfunc());
+  sectionAnimation();
+  submitBtnAnimation();
+  titleAnimation();
 })();
 
 function utilites() {
@@ -125,13 +93,24 @@ function constants() {
     afterBegin: "afterbegin",
   };
 
+  const ID = {
+    submit: "submit",
+    menu: "menu",
+    burger: "burger",
+    nav: "nav",
+  };
+
   const ATTR = {
     inert: "inert",
     airaExpanded: "aria-expanded",
     dataScrollFix: "data-scroll-fix",
     dataArrow: "data-arrow",
     dataBoxArrow: "data-box-arrow",
+    dataGlowingColumnArrowDown: "data-glowing-column-arrow",
+    dataGlowingRowArrowLeft: "data-glowing-row-arrow-left",
+    dataGlowingRowArrowRight: "data-glowing-row-arrow-right",
     dataHomeAnimation: "data-home-animation",
+    dataNavLink: "data-nav-link",
   };
 
   return {
@@ -141,6 +120,7 @@ function constants() {
     ATTR,
     HTML_POSITION,
     SCREEN_SIZE,
+    ID,
   };
 }
 
@@ -474,15 +454,17 @@ function ShootingStarAnimation() {
 
 function navigation() {
   const { responsive } = utilites();
-  const { EVENT, CLASSNAME, ATTR, SCREEN_SIZE } = constants();
+  const { EVENT, CLASSNAME, ATTR, SCREEN_SIZE, ID } = constants();
 
-  const menu = document.getElementById("menu");
-  const burgerLine = Array.from(document.querySelectorAll("#burger div"));
+  const menu = document.getElementById(ID.menu);
+  const burgerLine = Array.from(document.querySelectorAll(`#${ID.burger} div`));
   const scrollFixIds = Array.from(
     document.querySelectorAll(`div[${ATTR.dataScrollFix}]`)
   );
-  const nav = document.querySelector("nav.nav");
-  const navLinks = Array.from(document.querySelectorAll("a.nav-link"));
+  const nav = document.getElementById(ID.nav);
+  const navLinks = Array.from(
+    document.querySelectorAll(`a[${ATTR.dataNavLink}]`)
+  );
 
   let isClickDone = true;
 
@@ -512,7 +494,7 @@ function navigation() {
 
   const burger = (onBurger) => {
     const { EVENT } = constants();
-    const burger = document.getElementById("burger");
+    const burger = document.getElementById(ID.burger);
 
     const cleanUp = (e) => {
       e.preventDefault();
@@ -642,19 +624,23 @@ function navigation() {
   return [responsiveCleanUp, burgerCleanUp, navLinkCleanup, scrollCleanup];
 }
 
-function aboutAnimation() {
-  const { SCREEN_SIZE } = constants();
+function sectionAnimation() {
+  const { SCREEN_SIZE, ATTR } = constants();
   const { responsive } = utilites();
   const { downArrow, leftArrow, rightArrow, getColor } =
     ShootingStarAnimation();
 
   const rowLeftArrow = document.querySelectorAll(
-    "[data-glowing-row-arrow-left]"
+    `[${ATTR.dataGlowingRowArrowLeft}]`
   );
+
   const rowRightArrow = document.querySelectorAll(
-    "[data-glowing-row-arrow-right]"
+    `[${ATTR.dataGlowingRowArrowRight}]`
   );
-  const columnArrow = document.querySelectorAll("[data-glowing-column-arrow]");
+
+  const columnArrow = document.querySelectorAll(
+    `[${ATTR.dataGlowingColumnArrowDown}]`
+  );
 
   const setupTwo = {
     to: () => {
@@ -891,4 +877,24 @@ function homeAnimation() {
       );
     });
   }
+}
+
+function submitBtnAnimation() {
+  const { ID } = constants();
+  const { appendBoxArrow } = ShootingStarAnimation();
+
+  const btn = document.getElementById(ID.submit);
+
+  appendBoxArrow(btn);
+}
+
+function titleAnimation() {
+  const { ATTR } = constants();
+  const { appendArrow } = ShootingStarAnimation();
+
+  const headerArrow = Array.from(
+    document.querySelectorAll(`[${ATTR.dataArrow}]`)
+  );
+
+  headerArrow.forEach((el) => appendArrow(el));
 }

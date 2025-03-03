@@ -338,6 +338,45 @@ body::after {
   padding: 2rem;
 }
 
+.external {
+  transition: 0.5s;
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-size: 1.5rem;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.icon-external {
+  transition: 0.5s;
+  fill: var(--secondary-color);
+}
+
+.external:hover,
+.external:hover .icon-external {
+  fill: var(--primary-color);
+  color: var(--primary-color);
+}
+
+/* lovely garbage css */
+.about {
+  padding-top: 4rem;
+}
+
+.resume {
+  padding-top: 2rem;
+}
+
+.about .card-gradient:nth-child(1) {
+  margin-bottom: 2rem;
+}
+
+.contact .card-gradient,
+.about .card-gradient:nth-child(1),
+.resume > .flex-center-end {
+  margin-top: 4rem;
+}
+
 .projects-card-layout {
   display: grid;
   grid-template-columns: 1fr;
@@ -360,45 +399,6 @@ body::after {
 .skills-card-layout .card {
   width: 8.5rem;
   margin: auto;
-}
-
-.external {
-  /* display: inline-block; */
-  transition: 0.5s;
-  color: var(--secondary-color);
-  text-decoration: none;
-  font-size: 1.5rem;
-  vertical-align: middle;
-  margin: 0;
-}
-
-.icon-external {
-  transition: 0.5s;
-  fill: var(--secondary-color);
-}
-
-.external:hover,
-.external:hover .icon-external {
-  fill: var(--primary-color);
-  color: var(--primary-color);
-}
-
-.about {
-  padding-top: 4rem;
-}
-
-.resume {
-  padding-top: 2rem;
-}
-
-.about .card-gradient:nth-child(1) {
-  margin-bottom: 2rem;
-}
-
-.contact .card-gradient,
-.about .card-gradient:nth-child(1),
-.resume > .flex-center-end {
-  margin-top: 4rem;
 }
 
 @media only screen and (min-width: 48em) {
@@ -456,6 +456,7 @@ body::after {
     padding-left: 5rem;
   }
 }
+/* lovely garbage css */
 
 /*********************************************************************************************************************************
 ##################################################################################################################################
