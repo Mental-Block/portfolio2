@@ -383,30 +383,22 @@ body::after {
   color: var(--primary-color);
 }
 
-.contact {
-  padding-bottom: 4rem;
-}
-
-.contact .card-gradient {
-  margin-top: 4rem;
+.about {
+  padding-top: 4rem;
 }
 
 .resume {
   padding-top: 2rem;
 }
 
-.projects,
-.about {
-  padding-top: 4rem;
-}
-
 .about .card-gradient:nth-child(1) {
-  margin-top: 4rem;
   margin-bottom: 2rem;
 }
 
+.contact .card-gradient,
+.about .card-gradient:nth-child(1),
 .resume > .flex-center-end {
-  margin-top: 3rem;
+  margin-top: 4rem;
 }
 
 @media only screen and (min-width: 48em) {
@@ -419,13 +411,14 @@ body::after {
     padding-bottom: 4rem;
   }
 
+  .projects,
   .resume {
     padding-top: 4rem;
   }
 
   .about {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-top: 6rem;
+    padding-bottom: 8rem;
     padding-left: 4rem;
   }
 
@@ -436,12 +429,7 @@ body::after {
   }
 
   .about .card-gradient:nth-child(1) {
-    margin-top: 3rem;
-    margin-bottom: 2rem;
-  }
-
-  .about .card-gradient:nth-child(2) {
-    margin-bottom: 4rem;
+    margin-top: 4rem;
   }
 }
 
@@ -458,12 +446,14 @@ body::after {
 
   .skills {
     padding-top: 6rem;
-    padding-bottom: 6rem;
+    padding-bottom: 5rem;
+    padding-left: 5rem;
   }
 
   .about {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-top: 7rem;
+    padding-bottom: 9rem;
+    padding-left: 5rem;
   }
 }
 
@@ -1110,7 +1100,7 @@ body::after {
 }
 
 .footer {
-  margin-top: 4rem;
+  margin-top: 8rem;
   padding: 2rem 2rem 1rem 2rem;
   background-color: var(--primary-bg);
   border-top: 1px solid var(--primary-color);
