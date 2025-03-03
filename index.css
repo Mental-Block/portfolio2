@@ -133,13 +133,15 @@ table {
 
 @font-face {
   font-family: Roboto Condensed;
-  src: url(fonts/RobotoCondensed-VariableFont_wght.ttf) format("2off"),
-    url(fonts/RobotoCondensed-VariableFont_wght.ttf) format("woff2");
+  src: url(fonts/optimized/RobotoCondensed-VariableFont_wght.woff2)
+      format("woff2"),
+    url(fonts/optimized/RobotoCondensed-Italic-VariableFont_wght.woff)
+      format("woff");
 }
-
 @font-face {
   font-family: Roboto Mono;
-  src: url(fonts/RobotoMono-VariableFont_wght.ttf);
+  src: url(fonts/optimized/RobotoMono-VariableFont_wght.woff2) format("woff2"),
+    url(fonts/optimized/RobotoMono-VariableFont_wght.woff) format("woff");
 }
 
 html,
