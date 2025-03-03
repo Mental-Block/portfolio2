@@ -133,7 +133,8 @@ table {
 
 @font-face {
   font-family: Roboto Condensed;
-  src: url(fonts/RobotoCondensed-VariableFont_wght.ttf);
+  src: url(fonts/RobotoCondensed-VariableFont_wght.ttf) format("2off"),
+    url(fonts/RobotoCondensed-VariableFont_wght.ttf) format("woff2");
 }
 
 @font-face {
@@ -254,6 +255,57 @@ body::after {
   z-index: -2;
 }
 
+.content-wrapper {
+  max-width: 80rem;
+  margin: auto;
+}
+
+.content-container {
+  position: relative;
+  padding: 2rem;
+}
+
+.flex-center-center-column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.flex-center-center-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.flex-center-space {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.flex-center-end {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.flex-center-start {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.flex-center-end {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.hidden {
+  display: none !important;
+}
+
 /*********************************************************************************************************************************
 ##################################################################################################################################
 ##################################################################################################################################
@@ -326,16 +378,6 @@ body::after {
 .primary-btn:focus,
 .landing-btn:focus {
   outline: var(--white) dotted 0.125rem;
-}
-
-.content-wrapper {
-  max-width: 80rem;
-  margin: auto;
-}
-
-.content-container {
-  position: relative;
-  padding: 2rem;
 }
 
 .external {
@@ -483,48 +525,6 @@ body::after {
 ##################################################################################################################################
 ##################################################################################################################################
 *********************************************************************************************************************************/
-
-.flex-center-center-column {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.flex-center-center-row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-}
-
-.flex-center-space {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.flex-center-end {
-  display: flex;
-  align-items: center;
-  justify-content: end;
-}
-
-.flex-center-start {
-  display: flex;
-  align-items: center;
-  justify-content: start;
-}
-
-.flex-center-end {
-  display: flex;
-  align-items: center;
-  justify-content: end;
-}
-
-.hidden {
-  display: none !important;
-}
-
 .link {
   color: var(--blue);
   font-family: var(--secondary-font);
@@ -1216,8 +1216,6 @@ body::after {
     box-shadow: var(--glow-box-column-shadow);
     left: 0;
     overflow-y: hidden;
-    /* 
-    background: purple; */
   }
 
   .glowing-column-left::after {
