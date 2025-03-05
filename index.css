@@ -732,6 +732,7 @@ body::after {
 .card-footer {
   margin-top: auto;
   gap: 0.5em;
+  padding-top: 0.5em;
   display: flex;
   align-items: center;
   justify-content: start;
@@ -1019,8 +1020,8 @@ body::after {
 }
 
 .nav-burger-line {
-  width: 1.875rem;
-  height: 0.25rem;
+  width: 1.65rem;
+  height: 0.2rem;
   background-color: var(--primary-color);
   transition: 0.5s;
 }
