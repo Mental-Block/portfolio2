@@ -556,12 +556,26 @@ body::after {
 }
 
 .h2 {
-  margin-bottom: 0.25em;
+  /* margin-bottom: 0.25em; */
   line-height: 2.5rem;
   font-size: 1.5rem;
   font-size: clamp(1.5rem, 0.515rem + 1.553vw, 2rem);
   color: var(--primary-color);
   font-family: var(--secondary-font);
+}
+
+.list {
+  margin: 0.5em 0 1rem 1rem;
+  line-height: 1.75rem;
+  list-style: disc;
+}
+
+.list-item {
+  font-size: 1rem;
+  font-size: clamp(1rem, 0.939rem + 0.21vw, 2rem);
+  font-family: var(--secondary-font);
+  color: var(--tertiary-color);
+  text-shadow: 1px 1px var(--black);
 }
 
 .text {
