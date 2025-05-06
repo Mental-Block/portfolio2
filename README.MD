@@ -19,7 +19,6 @@ I'm a software developer focus on building fullstack applications.
 |------|-------------|
 | `/aarontibben.pdf` | My current resume |
 | `/index.html` | Has a list of projects and work experience |
-| `/projects-archive/` | Archived list of all projects I've worked on (school and personal) |
 
 ## Contact
 * GitHub: [github.com/mental-block](https://github.com/Mental-Block)
