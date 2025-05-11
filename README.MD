@@ -9,7 +9,7 @@ I'm a software developer focus on building fullstack applications.
 
 ## About Me
 * Writing software for 5+ years. 2+ years professionaly 
-* Focus: FullStack Development – maintaince, performance, architecture,
+* Focus: FullStack Development – maintaince, performance, architecture
 * Languages: Go, TypeScript, C, SQL, C#
 * Tools: Git, Linux, Docker, PostgreSQL, SQL Server, 
 * Interests/Projects: 8 Bit Computer 
