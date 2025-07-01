@@ -10,7 +10,8 @@ I'm a Full Stack developer based in Ottawa, ON. Over five years of programming e
 ## About Me
 * Focus: Backend development – performance, architecture, data flow
 * Languages: Go, TypeScript, React, Angular, SQL, C#
-* Tools: Git, Linux, Docker, PostgreSQL, Node.js, Express
+* Tools: Git, Linux, Docker
+* Databases: Postgres, MSSQL
 * Interests: Systems programming, API design, data pipelines
 
 ## Repository Structure
