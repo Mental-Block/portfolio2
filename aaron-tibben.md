@@ -33,7 +33,7 @@ React, Angular, RXJS,  Javascript, Typescript, HTML, CSS, GIT, SQL, Linux, C\#, 
 **PERSONAL PROJECT**	
 
 **MFG \- uncompleted | March 2025 |** [Source Code](https://github.com/Mental-Block/mfg)	  
-A scalable identity platform solution for administering web apps
+A web app for various kinds of manufacturing utilities
 
 * Client-server architecture, structured as a monolith, using domain driven design and hexagonal architecture pattern   
 * User authorization and authentication following [Zanzibar: Google’s Consistent, Global Authorization System](https://storage.googleapis.com/gweb-research2023-media/pubtools/5068.pdf) principles     
