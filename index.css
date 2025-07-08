@@ -952,13 +952,13 @@ body::after {
 
 .animation-fade-out {
   visibility: hidden;
-  opacity: 0;
+  /* opacity: 0; */
   transition: visibility 0s linear 300ms, opacity 300ms;
 }
 
 .animation-fade-in {
   visibility: visible;
-  opacity: 1;
+  /* opacity: 1; */
   transition: visibility 0s linear 0s, opacity 300ms;
 }
 
@@ -1253,6 +1253,9 @@ body::after {
     height: calc(100% - 2rem);
     z-index: 5;
     left: 0;
+    box-shadow: var(--glow-box-column-shadow);
+    /* doesn't need  box shadow glow cut off by x-overflow container */
+    border-left: 2px solid var(--primary-color);
   }
 
   /* cannot have index broswer needs to decide */

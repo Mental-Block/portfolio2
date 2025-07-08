@@ -726,12 +726,10 @@ body::after {
 }
 .animation-fade-out {
   visibility: hidden;
-  opacity: 0;
   transition: visibility 0s linear 0.3s, opacity 0.3s;
 }
 .animation-fade-in {
   visibility: visible;
-  opacity: 1;
   transition: visibility linear, opacity 0.3s;
 }
 .nav {
@@ -940,9 +938,9 @@ body::after {
     position: absolute;
     display: block;
     background: var(--primary-bg);
-    box-shadow: var(--glow-box-column-shadow);
     overflow-y: hidden;
     width: 2rem;
+    box-shadow: var(--glow-box-column-shadow);
   }
   .glowing-column-right {
     top: 0;
@@ -979,6 +977,8 @@ body::after {
     top: 0;
     height: calc(100% - 2rem);
     left: 0;
+    box-shadow: var(--glow-box-column-shadow);
+    border-left: 2px solid var(--primary-color);
   }
   .glowing-row {
     top: 0;
