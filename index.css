@@ -890,7 +890,7 @@ body::after {
 }
 
 @keyframes rightArrow {
-  0% {
+  0.001% {
     left: -100%;
   }
   50%,
@@ -907,7 +907,7 @@ body::after {
 }
 
 @keyframes leftArrow {
-  0% {
+  0.001% {
     right: -100%;
   }
   50%,
@@ -924,7 +924,7 @@ body::after {
 }
 
 @keyframes downArrow {
-  0% {
+  0.001% {
     top: -100%;
   }
   50%,
@@ -941,7 +941,7 @@ body::after {
 }
 
 @keyframes upArrow {
-  0% {
+  0.001% {
     bottom: -100%;
   }
   50%,

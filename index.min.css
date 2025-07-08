@@ -672,7 +672,7 @@ body::after {
   left: 100%;
 }
 @keyframes rightArrow {
-  0% {
+  0.001% {
     left: -100%;
   }
   100%,
@@ -690,7 +690,7 @@ body::after {
   height: 100%;
 }
 @keyframes leftArrow {
-  0% {
+  0.001% {
     right: -100%;
   }
   100%,
@@ -703,7 +703,7 @@ body::after {
   right: 0;
 }
 @keyframes downArrow {
-  0% {
+  0.001% {
     top: -100%;
   }
   100%,
@@ -716,7 +716,7 @@ body::after {
   left: 0;
 }
 @keyframes upArrow {
-  0% {
+  0.001% {
     bottom: -100%;
   }
   100%,
