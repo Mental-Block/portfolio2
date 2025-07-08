@@ -382,18 +382,24 @@ body::after {
   outline: var(--white) dotted 0.125rem;
 }
 
+/* default underline looks goofy*/
 .external {
+  text-decoration: none;
   transition: 0.5s;
   color: var(--secondary-color);
-  text-decoration: none;
   font-size: 1.5rem;
-  vertical-align: middle;
+  vertical-align: top;
   margin: 0;
+  border-bottom: 1px solid var(--secondary-color);
 }
 
 .icon-external {
   transition: 0.5s;
   fill: var(--secondary-color);
+}
+
+.external:hover {
+  border-bottom: 1px solid var(--primary-color);
 }
 
 .external:hover,
@@ -532,6 +538,7 @@ body::after {
   font-family: var(--secondary-font);
   text-decoration: none;
   font-size: clamp(1rem, 0.939rem + 0.21vw, 2rem);
+  text-decoration: underline;
 }
 
 .link:hover {
