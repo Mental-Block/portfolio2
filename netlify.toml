@@ -1,10 +1,6 @@
 [[redirects]]
   from = "/*"
-  to = "/index.html"
+  to = "https://aarontibben.netlify.app"
 
-[[redirects]]
-  from = "/index.html"
-  to = "/"
-  force = true
 
 
