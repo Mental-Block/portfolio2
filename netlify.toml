@@ -2,3 +2,4 @@
   from = "/*"
   to = "https://aarontibben.netlify.app"
   status = 404
+  force = true
